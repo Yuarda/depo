@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:background="#122143">
+
+    <!-- Başlık -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kelime Oyunu"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Oyun Bilgi Metni -->
+    <TextView
+        android:id="@+id/tvWordleInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oyun Yükleniyor..."
+        android:textSize="16sp"
+        android:textColor="#A0ABC0"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Dinamik Harf Tablosu (Kutucuklar buraya gelecek) -->
+    <!-- Not: Java/Kotlin tarafında bu grid içine ekleyeceğin TextView'ların da
+         karanlık temaya (örn: arka planı lacivert, yazısı beyaz) uygun olduğuna emin ol. -->
+    <GridLayout
+        android:id="@+id/wordleGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:alignmentMode="alignBounds"
+        android:columnOrderPreserved="true"
+        android:useDefaultMargins="true"/>
+
+    <!-- Tahmin Giriş Alanı -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:hint="Tahmininizi Yazın"
+        android:textColorHint="#A0ABC0"
+        app:hintTextColor="#FFFFFF"
+        app:boxStrokeColor="#FFFFFF"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeWidthFocused="2dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etWordleGuess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:inputType="textCapCharacters"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:letterSpacing="0.2" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Tahmin Et Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitGuess"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="T A H M İ N   E T"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#122143"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Soru İlerlemesi -->
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Soru 1 / 10"
+        android:textColor="#A0ABC0"
+        android:textSize="16sp"
+        android:letterSpacing="0.05"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Sorulan Kelime -->
+    <TextView
+        android:id="@+id/tvEnglishWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yükleniyor..."
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.02"
+        android:layout_marginBottom="48dp"
+        android:textAlignment="center"/>
+
+    <!-- ŞIKLAR İÇİN BUTONLAR -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOption1"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="A Şıkkı"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOption2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="B Şıkkı"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOption3"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="C Şıkkı"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnOption4"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="D Şıkkı"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

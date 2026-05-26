@@ -1,0 +1,7 @@
+<resources>
+    <!-- Metalik Lacivert Tonları -->
+    <color name="navy_dark">#0A1128</color>       <!-- Derin gölge -->
+    <color name="navy_metallic_shine">#3A506B</color> <!-- Parlayan, yansıyan kısım -->
+    <color name="navy_base">#1C2541</color>       <!-- Ana lacivert tonu -->
+    <color name="black">#000000</color>
+</resources>

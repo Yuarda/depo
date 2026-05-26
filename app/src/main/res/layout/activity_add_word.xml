@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#122143">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <!-- Başlık -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeni Kelime Ekle"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.02"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Zorunlu Alanlar -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="İngilizce Kelime (Zorunlu)"
+            android:textColorHint="#A0ABC0"
+            app:hintTextColor="#FFFFFF"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEngWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:inputType="textCapCharacters" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Türkçe Anlamı (Zorunlu)"
+            android:textColorHint="#A0ABC0"
+            app:hintTextColor="#FFFFFF"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTurWord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:inputType="textCapCharacters" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- İnce Ayırıcı Çizgi -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3A506B"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- İsteğe Bağlı Alanlar Başlığı -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="İsteğe Bağlı Ekstra Bilgiler"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#A0ABC0"
+            android:layout_marginBottom="16dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Kelimenin geçtiği örnek cümle"
+            android:textColorHint="#A0ABC0"
+            app:hintTextColor="#FFFFFF"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etSampleSentence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:minLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Resim URL / Dosya Yolu"
+            android:textColorHint="#A0ABC0"
+            app:hintTextColor="#FFFFFF"
+            app:boxStrokeColor="#FFFFFF"
+            app:boxStrokeWidth="1dp"
+            app:boxStrokeWidthFocused="2dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPicturePath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:inputType="textUri" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Kaydet Butonu -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddWord"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/metalik_lacivert"
+            android:text="Sisteme Kaydet"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            app:cornerRadius="12dp" />
+
+    </LinearLayout>
+</ScrollView>

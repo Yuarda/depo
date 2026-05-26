@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#122143"
+    android:padding="24dp">
+
+    <!-- Karşılama Başlığı -->
+    <TextView
+        android:id="@+id/tvWelcomeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Hoş Geldiniz!"
+        android:textColor="#B4B4B4"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Modern Alt Başlık -->
+    <TextView
+        android:id="@+id/tvWelcomeSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Bugün ne öğrenmek istersin?"
+        android:textColor="#BCBCBC"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeTitle" />
+
+    <!-- Menü Butonları Başlangıcı (Dikey Zincir) -->
+
+    <!-- 1. Quiz Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToQuiz"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="Günlük Quiz'e Başla"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FAFAFA"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToWordle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcomeSubtitle"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!-- 2. Wordle Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToWordle"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="Wordle Oyunu Oyna"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToAddWord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoToQuiz" />
+
+    <!-- 3. Yeni Kelime Ekle Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToAddWord"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="Yeni Kelime Ekle"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToAnalysis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoToWordle" />
+
+    <!-- 4. Analiz Butonu -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToAnalysis"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="Başarı Analizi"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoToSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoToAddWord" />
+
+    <!-- 5. Ayarlar Butonu (İkincil Eylem Rengiyle) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToSettings"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/metalik_lacivert"
+        android:text="Ayarlar"
+        android:textColor="#FBFBFB"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:cornerRadius="12dp"
+        app:elevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnGoToAnalysis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
