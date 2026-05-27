@@ -11,7 +11,8 @@ from fastapi.responses import StreamingResponse
 import matplotlib
 import matplotlib.pyplot as plt
 
-DATABASE_URL = "mssql+pyodbc://BERAT\\SQLEXPRESS/6KELİME?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
+#kodun çalışabilmesi için    --SİZİN_SUNUCU_ADINIZ-- girilmelidir.
+DATABASE_URL = "mssql+pyodbc://SİZİN_SUNUCU_ADINIZ\\SQLEXPRESS/6KELİME?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
@@ -48,7 +49,6 @@ class DB_UserWordProgress(Base):
     NextDate = Column(Date, default=date.today)
     IsWellKnown = Column(Boolean, default=False)
 
-Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Kelime Ezberleme API")
 
@@ -299,7 +299,7 @@ def submit_answer(answer: AnswerData, db: Session = Depends(get_db)):
 
 @app.get("/wordle/start/{user_id}")
 def start_wordle(user_id: int, db: Session = Depends(get_db)):
-    import random
+
 
     well_known_progress =db.query(DB_UserWordProgress).filter(
         DB_UserWordProgress.UserID ==user_id,
