@@ -1,0 +1,1 @@
+Projeyi çalıştırmadan önce SQL Server Management Studio (SSMS) üzerinden Veritabani_Kurulum.sql dosyasını çalıştırarak veritabanını ayağa kaldırınız.
