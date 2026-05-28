@@ -12,7 +12,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 
 #kodun çalışabilmesi için    --SİZİN_SUNUCU_ADINIZ-- girilmelidir.
-DATABASE_URL = "mssql+pyodbc://SİZİN_SUNUCU_ADINIZ\\SQLEXPRESS/6KELİME?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
+DATABASE_URL = "mssql+pyodbc://SİZİN_SUNUCU_ADINIZ\\SQLEXPRESS/vocabulary_memorization_system?driver=ODBC+Driver+17+for+SQL+Server&trusted_connection=yes"
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
